@@ -9,9 +9,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { User } from '../../models/user.class';
 import { FormsModule } from '@angular/forms';
-import { Firestore, collection, addDoc, DocumentReference, } from '@angular/fire/firestore';
+import { Firestore, collection, addDoc} from '@angular/fire/firestore';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {  } from '@angular/material/dialog';
+
 @Component({
   selector: 'app-dialog-add-user',
   standalone: true,

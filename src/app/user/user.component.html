@@ -5,16 +5,15 @@
             <th>E-Mail</th>
             <th>City</th>
         </tr>
-        <tr>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
+        @for (user of users; track user.id) {
+           
+            
+        <tr routerLink='/user/{{ user.id }}'>
+            <td>{{ user.firstName }} {{ user.lastName }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.city }}</td>
         </tr>
-        <tr>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-        </tr>
+    }
     </table>
 </mat-card>
 
