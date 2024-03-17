@@ -25,7 +25,7 @@ export class DialogAddUserComponent {
 
   user = new User();
   birthDate: Date | undefined;
-  onNoClick() { };
+  
 loading = false;
 
   saveUser() {
@@ -37,6 +37,5 @@ loading = false;
       this.loading=false;
       this.dialogRef.close()
     });
-
   }
 }

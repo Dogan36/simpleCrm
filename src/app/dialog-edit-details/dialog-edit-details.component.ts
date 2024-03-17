@@ -33,11 +33,9 @@ export class DialogEditDetailsComponent {
       this.user.birthDate = this.birthDate.getTime()
     }
     this.loading = true
-    debugger
     setDoc(doc(this.firestore, "users", this.userId), { ...this.user }).then((result: any) => {
       this.loading = false;
       this.dialogRef.close()
     });
-
   }
 }
