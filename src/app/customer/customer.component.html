@@ -1,0 +1,25 @@
+<mat-card>
+    <table class="userTable">
+        <tr>
+            <th>Company</th>
+            <th>Name</th>
+            <th>E-Mail</th>
+            <th>City</th>
+        </tr>
+        @for (customer of customers; track customer.id) {
+
+
+        <tr routerLink='/customer/{{ customer.id }}'>
+            <td>{{ customer.company }}</td>
+            <td>{{ customer.firstName }} {{ customer.lastName }}</td>
+            <td>{{ customer.email }}</td>
+            <td>{{ customer.city }}</td>
+        </tr>
+        }
+    </table>
+</mat-card>
+
+<button (click)="openDialog()" class="addUserButton" mat-fab color="primary" matTooltip="Add customer"
+    matTooltipPosition="above">
+    <mat-icon>add</mat-icon>
+</button>
